@@ -1,0 +1,17 @@
+module <%=class_name%>Presenter
+  extend ActiveSupport::Concern
+
+  included do
+    acts_as_api
+
+    api_accessible :base do |t|
+      <%= columns %>
+    end
+
+    ## ----------------------- User Response ------------------------- ##
+
+    api_accessible :user_index, extend: :base
+
+    api_accessible :user_show, extend: :user_index
+  end
+end
