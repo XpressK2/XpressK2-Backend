@@ -16,8 +16,6 @@ gem 'consul', '~> 1.0', '>= 1.0.3'
 gem 'enumerize', '~> 2.4'
 gem 'smart_error', '~> 1.0', '>= 1.0.3'
 gem 'bcrypt', '~> 3.1.7'
-
-# Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
@@ -28,6 +26,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'httplog', '~> 1.4', '>= 1.4.3'
   gem 'rubocop', '~> 1.7'
   gem 'pry-rails', '~> 0.3.9'
   gem 'annotate', '~> 3.1', '>= 3.1.1'
@@ -36,5 +35,4 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -3,16 +3,18 @@
 # Table name: users
 #
 #  id              :bigint           not null, primary key
-#  country         :string           not null
-#  country_code    :string           not null
-#  email           :string           not null
-#  name            :string           not null
+#  country         :string
+#  country_code    :string
+#  email           :string
+#  name            :string
 #  password_digest :string           not null
 #  status          :integer          default("inactive")
-#  telephone_no    :string           not null
-#  trade_role      :integer          not null
+#  telephone_no    :string
+#  third_party     :boolean          default(FALSE)
+#  trade_role      :integer          default("buyer")
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  local_id        :string
 #
 # Indexes
 #
