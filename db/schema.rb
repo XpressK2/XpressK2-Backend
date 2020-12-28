@@ -16,14 +16,16 @@ ActiveRecord::Schema.define(version: 2020_12_25_153017) do
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "email", null: false
+    t.string "name"
+    t.string "email"
     t.string "password_digest", null: false
-    t.integer "trade_role", null: false
+    t.integer "trade_role", default: 1
     t.integer "status", default: 1
-    t.string "country", null: false
-    t.string "country_code", null: false
-    t.string "telephone_no", null: false
+    t.string "country"
+    t.string "country_code"
+    t.string "telephone_no"
+    t.boolean "third_party", default: false
+    t.string "local_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["country_code", "telephone_no"], name: "index_users_on_country_code_and_telephone_no", unique: true

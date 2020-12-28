@@ -21,4 +21,8 @@ class Power
   power :creatable_signup do
     User
   end
+
+  power :google_signup, :facebook_signup do
+    true
+  end
 end

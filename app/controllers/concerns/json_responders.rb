@@ -3,7 +3,7 @@
 module JsonResponders
   # Render a message
   def render_success(message: I18n.t(:data_found), data: {})
-    render json: { message: message, **data }, status: :ok
+    render json: { status: :success, message: message, **data }
   end
 
   # Render Created

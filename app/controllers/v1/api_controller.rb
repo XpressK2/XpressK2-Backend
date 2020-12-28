@@ -30,6 +30,6 @@ class V1::ApiController < ApplicationController
   end
 
   def api_accessor_token
-    Rails.application.credentials[:API_ACCESSOR_TOKEN]
+    Rails.application.credentials.dig(:EXPRESS, :API_ACCESSOR_TOKEN)
   end
 end
