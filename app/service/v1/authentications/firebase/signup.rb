@@ -22,7 +22,7 @@ module V1::Authentications::Firebase
 
     private
 
-    API_KEY = Rails.application.credentials.dig(:FIREBASE, :API_KEY)
+    API_KEY = ENV['API_KEY']
 
     attr_reader :id_token, :response
 

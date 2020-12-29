@@ -30,6 +30,6 @@ class V1::ApiController < ApplicationController
   end
 
   def api_accessor_token
-    Rails.application.credentials.dig(:EXPRESS, :API_ACCESSOR_TOKEN)
+    ENV['API_ACCESSOR_TOKEN']
   end
 end
